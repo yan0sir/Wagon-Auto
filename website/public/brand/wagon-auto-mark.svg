@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="22 -4 138 64" role="img" aria-labelledby="t">
+  <title id="t">Wagon Auto</title>
+  <g id="mark">
+    <path fill="#ED1C24" d="M26 0H54.5L85.93 53.5H57.4Z"/>
+    <path fill="#ED1C24" d="M127 0H155.5L125.65 53.5H97.15Z"/>
+    <path fill="#AC1929" d="M88.9 0L101.75 20.7L84.15 52.2L71.2 30.2Z"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+# Dependencies and build output (the website has its own .gitignore too)
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Environment / secrets
+.env*
+*.pem
+
+# Local tool config
+.claude/
+.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
