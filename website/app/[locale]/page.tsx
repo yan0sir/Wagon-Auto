@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 import { waHref } from "@/lib/whatsapp";
 import { ButtonLink, Container, SectionTitle, TextLink, reveal } from "@/components/ui/primitives";
 import { CardGrid, CtaBand, Steps } from "@/components/sections/shared";
-import { ScrollVideoBand } from "@/components/visuals/ScrollVideoBand";
+import { ScrollScrubVideo } from "@/components/visuals/ScrollScrubVideo";
 import { HeroBackdrop } from "@/components/visuals/HeroBackdrop";
 import { Visual, type VisualKind } from "@/components/visuals/Visual";
 
@@ -50,8 +50,12 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Video break: plays only while the visitor scrolls */}
-      <ScrollVideoBand src="/video/car-night-drive.mp4" poster="/video/car-night-drive-poster.jpg" />
+      {/* Scroll-scrubbed video: scroll position drives the clip, like an image sequence */}
+      <ScrollScrubVideo
+        src="/video/highway-aerial-scrub.mp4"
+        poster="/video/highway-aerial-poster.jpg"
+        text={h.scrollVideo.text}
+      />
 
       {/* What we do */}
       <section className="py-16 lg:py-24">

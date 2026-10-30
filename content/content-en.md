@@ -65,6 +65,9 @@
 ### `who-we-are`
 - **Statement:** A Bahrain-registered trading company connecting trusted vehicle suppliers with **demand across the Gulf.**
 
+### `scroll-video`
+- **Paragraph (over the scroll-driven video):** Every vehicle we trade follows a clear, documented route: from the supplier's yard, across borders, to the buyer's door.
+
 ### `what-we-do`
 - **Label:** ■ WHAT WE DO
 - **Title:** Vehicle trading, **end to end.**

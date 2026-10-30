@@ -34,9 +34,10 @@ by a car manufacturer's own account.)
 
 ## Video
 
-| File | Used for | Creator | Source | License |
-|---|---|---|---|---|
-| `public/video/car-night-drive.mp4` (+ `-poster.jpg`) | Home video break (plays while scrolling) | 4art 44 | https://www.pexels.com/video/13574383/ | [Pexels License](https://www.pexels.com/license/): free for commercial use, no attribution required |
+| File | Used for | Source | License |
+|---|---|---|---|
+| `public/video/highway-aerial-scrub.mp4` (+ `highway-aerial-poster.jpg`) | Home scroll-scrubbed video (between "Who we are" and "What we do") | Pexels video #2293417 (top-down highway), supplied by Wagon Auto | [Pexels License](https://www.pexels.com/license/): free for commercial use, no attribution required. Creator name to be added from https://www.pexels.com/video/2293417/ |
 
-Edits made: number plate blurred on every frame, resized to 1280x720, audio removed, re-encoded
-(H.264) for the web.
+Edits made: scaled from 4K to 1280x720, audio removed, re-encoded as H.264 with a keyframe every
+2 frames so it can be scrubbed smoothly by scroll position. The 4K original is kept locally in
+`assets/video/` (not committed, too large for the repo).

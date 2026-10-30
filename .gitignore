@@ -16,3 +16,6 @@ out/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Large video source files (kept locally, not committed)
+assets/video/*.mp4

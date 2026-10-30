@@ -70,6 +70,9 @@ export const en = {
       statement:
         "A Bahrain-registered trading company connecting trusted vehicle suppliers with **demand across the Gulf.**",
     },
+    scrollVideo: {
+      text: "Every vehicle we trade follows a clear, documented route: from the supplier's yard, across borders, to the buyer's door.",
+    },
     whatWeDo: {
       label: "What we do",
       title: "Vehicle trading, **end to end.**",
