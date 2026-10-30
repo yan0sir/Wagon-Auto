@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Rail } from "@/components/layout/Rail";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { RevealObserver } from "@/components/ui/RevealObserver";
+import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import "../globals.css";
 
 const plexSans = IBM_Plex_Sans({
@@ -98,6 +99,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
         <Footer c={c} locale={locale} />
         <FloatingWhatsApp href={wa} label={c.ui.whatsapp} />
         <RevealObserver />
+        <SmoothScroll />
       </body>
     </html>
   );

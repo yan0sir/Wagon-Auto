@@ -52,13 +52,13 @@ export function Header({
   // Lock page scroll while the menu is open; Escape closes it.
   useEffect(() => {
     if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const prev = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenOn(null);
     window.addEventListener("keydown", onKey);
     menuRef.current?.querySelector<HTMLElement>("a")?.focus();
     return () => {
-      document.body.style.overflow = prev;
+      document.documentElement.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
@@ -144,6 +144,7 @@ export function Header({
           would otherwise become the containing block for this fixed overlay. */}
       <div
         id="mobile-menu"
+        data-lenis-prevent
         ref={menuRef}
         hidden={!open}
         className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-ink-950 lg:hidden"
