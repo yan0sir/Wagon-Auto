@@ -15,7 +15,6 @@ Downloaded 2026-10-23. Replace with Wagon Auto's own photography when available.
 | `about-bahrain-bay.jpg` | About (story) | zain Sadah | https://unsplash.com/photos/Iza21CdWz60 |
 | `manama-sunset.jpg` | Home "For suppliers" panel | Ondrej Bocek | https://unsplash.com/photos/Di6Ebx4fS8I |
 | `hero-highway-night.jpg` | Home hero background | Florian Steciuk | https://unsplash.com/photos/F7Rl02ir0Gg |
-| `band-cars-aerial.jpg` | Home image band (between "Who we are" and "What we do") | Benjamin Cheng | https://unsplash.com/photos/PR3V9bP4U0g |
 | `hero-about-manama-waterfront.jpg` | About page header | Afsal Shaji | https://unsplash.com/photos/cf_awEY1_bY |
 | `hero-services-port-aerial.jpg` | What We Do page header | Alex Duffy | https://unsplash.com/photos/a-E__y8y5Wo |
 | `hero-partners-port-cranes.jpg` | Partner With Us page header | Joakim Honkasalo | https://unsplash.com/photos/hyj_RRTzJjo |
@@ -32,3 +31,12 @@ a car-carrier truck showing a haulier's name and DOT numbers, a key fob with a c
 a container port with a shipping line's name on the hull, a ship with its name visible, close-ups
 showing car-maker badges, container walls with readable shipping-line marks, and a photo published
 by a car manufacturer's own account.)
+
+## Video
+
+| File | Used for | Creator | Source | License |
+|---|---|---|---|---|
+| `public/video/car-night-drive.mp4` (+ `-poster.jpg`) | Home video break (plays while scrolling) | 4art 44 | https://www.pexels.com/video/13574383/ | [Pexels License](https://www.pexels.com/license/): free for commercial use, no attribution required |
+
+Edits made: number plate blurred on every frame, resized to 1280x720, audio removed, re-encoded
+(H.264) for the web.
