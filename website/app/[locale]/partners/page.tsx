@@ -13,6 +13,15 @@ export async function generateMetadata(): Promise<Metadata> {
   return pageMetadata(c.partners.seo, locale, "/partners");
 }
 
+// One photo per partner type, in the same order as content `whoWeWorkWith.items`.
+const partnerPhotos = [
+  { photo: "/images/partner-manufacturers-assembly.jpg", photoPosition: "50% 50%" },
+  { photo: "/images/partner-dealerships-showroom.jpg", photoPosition: "50% 60%" },
+  { photo: "/images/partner-exporters-container-ship.jpg", photoPosition: "50% 50%" },
+  { photo: "/images/partner-auction-used-cars.jpg", photoPosition: "50% 50%" },
+  { photo: "/images/partner-fleet-car-lot.jpg", photoPosition: "50% 60%" },
+];
+
 export default async function PartnersPage() {
   const [c, locale] = await Promise.all([getContent(), getLocale()]);
   const p = c.partners;
@@ -20,13 +29,17 @@ export default async function PartnersPage() {
 
   return (
     <>
-      <PageHero headline={p.hero.headline} />
+      <PageHero headline={p.hero.headline} photo="/images/hero-partners-port-cranes.jpg" photoPosition="50% 55%" />
 
       <section className="py-16 lg:py-24">
         <Container>
           <SectionTitle title={p.whoWeWorkWith.label} intro={p.intro} />
           <div className="mt-10 lg:mt-12" {...reveal(1)}>
-            <Carousel items={p.whoWeWorkWith.items} prevLabel={c.ui.previous} nextLabel={c.ui.next} />
+            <Carousel
+              items={p.whoWeWorkWith.items.map((item, i) => ({ ...item, ...partnerPhotos[i] }))}
+              prevLabel={c.ui.previous}
+              nextLabel={c.ui.next}
+            />
           </div>
         </Container>
       </section>

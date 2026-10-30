@@ -1,14 +1,44 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { rich } from "@/lib/rich";
 import { ButtonLink, Container, SectionTitle, reveal } from "@/components/ui/primitives";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
-/** Header for inner pages: centered headline with optional intro. */
-export function PageHero({ headline, text }: { headline: string; text?: string }) {
+/** Header for inner pages: centered headline with optional intro, over an optional dimmed photo. */
+export function PageHero({
+  headline,
+  text,
+  photo,
+  photoPosition = "50% 50%",
+}: {
+  headline: string;
+  text?: string;
+  photo?: string;
+  photoPosition?: string;
+}) {
   return (
-    <section className="relative isolate overflow-hidden border-b border-rule pt-28 pb-12 lg:pt-36 lg:pb-16">
+    <section
+      className={`relative isolate overflow-hidden border-b border-rule ${
+        photo ? "pt-36 pb-16 lg:pt-48 lg:pb-24" : "pt-28 pb-12 lg:pt-36 lg:pb-16"
+      }`}
+    >
       <div aria-hidden className="absolute inset-0 -z-10">
+        {photo && (
+          <>
+            <Image
+              src={photo}
+              alt=""
+              fill
+              preload
+              sizes="100vw"
+              className="object-cover opacity-50 grayscale-[30%]"
+              style={{ objectPosition: photoPosition }}
+            />
+            <div className="absolute inset-0 bg-navy-700/35 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/30" />
+          </>
+        )}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_85%_0%,rgb(0_36_106/0.6),transparent_70%)] rtl:bg-[radial-gradient(ellipse_60%_80%_at_15%_0%,rgb(0_36_106/0.6),transparent_70%)]" />
         <svg
           viewBox="0 -4 182 64"

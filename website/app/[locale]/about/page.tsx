@@ -27,7 +27,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <PageHero headline={a.hero.headline} />
+      <PageHero headline={a.hero.headline} photo="/images/hero-about-manama-waterfront.jpg" photoPosition="50% 60%" />
 
       {/* Story */}
       <section className="py-16 lg:py-24">

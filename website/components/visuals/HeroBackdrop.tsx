@@ -1,13 +1,21 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 /**
- * Animated hero background: diagonal stripes at the angle of the W, a giant outlined mark
- * and the red fold. The motion is slow and subtle, and stops under prefers-reduced-motion.
+ * Hero background: an optional dimmed photo, then diagonal stripes at the angle of the W,
+ * a giant outlined mark and the red fold. Motion is slow and stops under prefers-reduced-motion.
  */
-export function HeroBackdrop({ children }: { children: ReactNode }) {
+export function HeroBackdrop({ children, photo }: { children: ReactNode; photo?: string }) {
   return (
     <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden">
       <div aria-hidden className="absolute inset-0 -z-10">
+        {photo && (
+          <>
+            <Image src={photo} alt="" fill preload sizes="100vw" className="object-cover opacity-45 grayscale-[30%]" />
+            <div className="absolute inset-0 bg-navy-700/35 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/55 to-ink-950/20 rtl:bg-gradient-to-l" />
+          </>
+        )}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_70%_at_78%_20%,rgb(0_36_106/0.75),transparent_70%)] rtl:bg-[radial-gradient(ellipse_80%_70%_at_22%_20%,rgb(0_36_106/0.75),transparent_70%)]" />
         <div
           className="anim-stripes absolute inset-0 opacity-60 [mask-image:radial-gradient(ellipse_70%_80%_at_75%_35%,black,transparent_75%)] rtl:-scale-x-100"

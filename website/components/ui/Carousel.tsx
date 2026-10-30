@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowIcon } from "./icons";
 
@@ -11,7 +12,7 @@ export function Carousel({
   prevLabel,
   nextLabel,
 }: {
-  items: { title: string; text: string }[];
+  items: { title: string; text: string; photo?: string; photoPosition?: string }[];
   prevLabel: string;
   nextLabel: string;
 }) {
@@ -63,26 +64,29 @@ export function Carousel({
         {items.map((item, i) => (
           <li
             key={item.title}
-            className="group flex min-h-80 w-[82%] shrink-0 snap-start flex-col border border-rule bg-ink-900 p-8 transition-colors duration-500 hover:border-paper-50/30 sm:w-[46%] lg:w-[36%] lg:p-10"
+            className="group flex w-[82%] shrink-0 snap-start flex-col overflow-hidden border border-rule bg-ink-900 transition-colors duration-500 hover:border-paper-50/30 sm:w-[46%] lg:w-[36%]"
           >
-            <span className="t-num text-xs text-red-500">{pad(i + 1)}</span>
-            <svg viewBox="0 -4 182 64" aria-hidden className="mt-10 w-24 rtl:-scale-x-100">
-              <path d="M26 0H54.5L85.93 53.5H57.4Z" fill="none" stroke="rgb(244 243 239 / 0.25)" strokeWidth="1.5" />
-              <path
-                d="M127 0H155.5L125.65 53.5H97.15Z"
-                fill="none"
-                stroke="rgb(244 243 239 / 0.25)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="M88.9 0L101.75 20.7L84.15 52.2L71.2 30.2Z"
-                fill="#ed1c24"
-                className="origin-center transition-opacity duration-500 group-hover:opacity-100"
-                opacity="0.7"
-              />
-            </svg>
-            <h3 className="t-title mt-auto pt-10">{item.title}</h3>
-            <p className="t-body mt-3 text-paper-50/70">{item.text}</p>
+            <div className="relative aspect-[16/10] overflow-hidden border-b border-rule">
+              {item.photo && (
+                <Image
+                  src={item.photo}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 36vw, (min-width: 640px) 46vw, 82vw"
+                  className="object-cover grayscale-[40%] transition-transform duration-[1.6s] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.04]"
+                  style={{ objectPosition: item.photoPosition ?? "50% 50%" }}
+                />
+              )}
+              <div className="absolute inset-0 bg-navy-700/30 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent" />
+              <span className="t-num absolute start-4 top-4 bg-ink-950/70 px-2 py-1 text-xs text-red-500">
+                {pad(i + 1)}
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col p-8 lg:p-10">
+              <h3 className="t-title">{item.title}</h3>
+              <p className="t-body mt-3 text-paper-50/70">{item.text}</p>
+            </div>
           </li>
         ))}
       </ul>

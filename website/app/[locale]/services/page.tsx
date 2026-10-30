@@ -20,7 +20,12 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <PageHero headline={s.hero.headline} text={s.hero.text} />
+      <PageHero
+        headline={s.hero.headline}
+        text={s.hero.text}
+        photo="/images/hero-services-port-aerial.jpg"
+        photoPosition="50% 45%"
+      />
 
       {/* Jump list */}
       <nav aria-label={s.hero.label} className="border-b border-rule">

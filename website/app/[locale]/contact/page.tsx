@@ -41,7 +41,12 @@ export default async function ContactPage() {
 
   return (
     <>
-      <PageHero headline={k.hero.headline} text={k.hero.text} />
+      <PageHero
+        headline={k.hero.headline}
+        text={k.hero.text}
+        photo="/images/hero-contact-manama-lights.jpg"
+        photoPosition="50% 60%"
+      />
 
       <section className="py-14 lg:py-20">
         <Container>

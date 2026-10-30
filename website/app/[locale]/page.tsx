@@ -23,7 +23,7 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <HeroBackdrop>
+      <HeroBackdrop photo="/images/hero-highway-night.jpg">
         <Container className="flex flex-1 flex-col justify-end pt-28 pb-16 lg:pb-20">
           <h1 className="t-display-l max-w-[14ch]" {...reveal(0)}>
             {rich(h.hero.headline)}
