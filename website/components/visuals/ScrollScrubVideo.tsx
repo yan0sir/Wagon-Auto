@@ -67,7 +67,7 @@ export function ScrollScrubVideo({ src, poster, text }: { src: string; poster: s
   }, []);
 
   return (
-    <section ref={section} className="group/scrub relative h-[110vh] data-[static=true]:h-[70svh]">
+    <section ref={section} className="group/scrub relative h-[140vh] data-[static=true]:h-[70svh]">
       <div className="sticky top-0 h-[100svh] overflow-hidden">
         <video
           aria-hidden
