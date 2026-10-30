@@ -15,6 +15,7 @@ Downloaded 2026-10-23. Replace with Wagon Auto's own photography when available.
 | `about-bahrain-bay.jpg` | About (story) | zain Sadah | https://unsplash.com/photos/Iza21CdWz60 |
 | `manama-sunset.jpg` | Home "For suppliers" panel | Ondrej Bocek | https://unsplash.com/photos/Di6Ebx4fS8I |
 | `hero-highway-night.jpg` | Home hero background | Florian Steciuk | https://unsplash.com/photos/F7Rl02ir0Gg |
+| `band-cars-aerial.jpg` | Home image band (between "Who we are" and "What we do") | Benjamin Cheng | https://unsplash.com/photos/PR3V9bP4U0g |
 | `hero-about-manama-waterfront.jpg` | About page header | Afsal Shaji | https://unsplash.com/photos/cf_awEY1_bY |
 | `hero-services-port-aerial.jpg` | What We Do page header | Alex Duffy | https://unsplash.com/photos/a-E__y8y5Wo |
 | `hero-partners-port-cranes.jpg` | Partner With Us page header | Joakim Honkasalo | https://unsplash.com/photos/hyj_RRTzJjo |

@@ -108,7 +108,7 @@
 - **CTA:** Partner with us → `/partners`
 
 ### `cta`
-- **Title:** Looking for a trading partner **in the Gulf?** **Let's talk.**
+- **Title:** Looking for a trading partner in the Gulf? **Let's talk.**
 - **Text:** Whether you supply vehicles or need them sourced, we would like to hear from you.
 - **CTA:** Chat on WhatsApp → `wa.general`
 

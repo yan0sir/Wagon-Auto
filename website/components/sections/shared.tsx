@@ -63,6 +63,28 @@ export function PageHero({
   );
 }
 
+/**
+ * Full-width photo break between sections. Top and bottom fade into the page background,
+ * and the photo eases in from a slight zoom when it scrolls into view.
+ */
+export function ImageBand({ photo, position = "50% 50%" }: { photo: string; position?: string }) {
+  return (
+    <div aria-hidden className="relative h-[clamp(260px,42vw,560px)] overflow-hidden" {...reveal(0)}>
+      <Image
+        src={photo}
+        alt=""
+        fill
+        sizes="100vw"
+        className="band-photo object-cover grayscale-[35%]"
+        style={{ objectPosition: position }}
+      />
+      <div className="absolute inset-0 bg-navy-700/35 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950 via-transparent to-ink-950" />
+      <div className="bg-grid absolute inset-0 opacity-30" />
+    </div>
+  );
+}
+
 /** Numbered steps joined by a hairline. Used for "How we work" and "How to start". */
 export function Steps({
   title,

@@ -4,7 +4,7 @@ import { rich } from "@/lib/rich";
 import { pageMetadata } from "@/lib/seo";
 import { waHref } from "@/lib/whatsapp";
 import { ButtonLink, Container, SectionTitle, TextLink, reveal } from "@/components/ui/primitives";
-import { CardGrid, CtaBand, Steps } from "@/components/sections/shared";
+import { CardGrid, CtaBand, ImageBand, Steps } from "@/components/sections/shared";
 import { HeroBackdrop } from "@/components/visuals/HeroBackdrop";
 import { Visual, type VisualKind } from "@/components/visuals/Visual";
 
@@ -49,8 +49,11 @@ export default async function HomePage() {
         </Container>
       </section>
 
+      {/* Image break */}
+      <ImageBand photo="/images/band-cars-aerial.jpg" position="50% 45%" />
+
       {/* What we do */}
-      <section className="border-t border-rule py-16 lg:py-24">
+      <section className="py-16 lg:py-24">
         <Container>
           <SectionTitle title={rich(h.whatWeDo.title)} />
 
