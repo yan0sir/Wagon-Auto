@@ -140,7 +140,7 @@ export const en = {
       cta: "Partner with us",
     },
     cta: {
-      title: "Looking for a trading partner **in the Gulf?** **Let's talk.**",
+      title: "Looking for a trading partner in the Gulf? **Let's talk.**",
       text: "Whether you supply vehicles or need them sourced, we would like to hear from you.",
       button: "Chat on WhatsApp",
     },
